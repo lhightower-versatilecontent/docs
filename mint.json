@@ -2,8 +2,8 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "SchemaBuilder",
   "logo": {
-    "dark": "/images/logo/schemabuilder.png",
-    "light": "/images/logo/schemabuilder.png"
+    "dark": "/images/schemabuilder.png",
+    "light": "/images/schemabuilder.png"
   },
   "favicon": "/favicon.svg",
   "colors": {
