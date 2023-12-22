@@ -86,7 +86,7 @@
         }
       }
     },
-    "/schema/content/{org}/{id}": {
+    "/schema/content/{org}/{schema}": {
       "get": {
         "summary": "Retrieve schema content by ID and organization",
         "parameters": [
@@ -99,7 +99,7 @@
             }
           },
           {
-            "name": "id",
+            "name": "schema",
             "in": "path",
             "required": true,
             "schema": {
@@ -109,7 +109,59 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful retrieval of schema content",
+            "description": "Successful post of schema content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Retrieve schema content by ID and organization",
+        "parameters": [
+          {
+            "name": "org",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "schema",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "content": {
+                    "type": "object"
+                  }
+                },
+                "required": ["content"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful creation of schema content",
             "content": {
               "application/json": {
                 "schema": {

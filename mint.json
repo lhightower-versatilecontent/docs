@@ -5,7 +5,7 @@
     "dark": "https://vc-schemabuilder.vercel.app/schemabuilder.png",
     "light": "https://vc-schemabuilder.vercel.app/schemabuilder.png"
   },
-  "favicon": "https://vc-schemabuilder.vercel.app/favicon.png",
+  "favicon": "/favicon.svg",
   "colors": {
     "primary": "#FF7545",
     "light": "#C9F2FF",
@@ -32,7 +32,7 @@
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "add a schema", "add content"]
+      "pages": ["introduction"]
     },
     {
       "group": "API Documentation",
@@ -41,9 +41,10 @@
     {
       "group": "Endpoint Examples",
       "pages": [
-        "api-reference/endpoint/status",
+        "api-reference/endpoint/get-status",
         "api-reference/endpoint/get-content",
-        "api-reference/endpoint/schema"
+        "api-reference/endpoint/get-schema",
+        "api-reference/endpoint/post-content"
       ]
     }
   ]
