@@ -65,33 +65,21 @@
         }
       }
     },
-    "/schema/{org}/{id}": {
+    "/status": {
       "get": {
-        "summary": "Retrieve schema by ID and organization",
-        "parameters": [
-          {
-            "name": "org",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
+        "summary": "Get server status",
         "responses": {
           "200": {
-            "description": "Successful retrieval of schema",
+            "description": "Server is running",
             "content": {
               "application/json": {
-                "schema": {}
+                "schema": {
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    }
+                  }
+                }
               }
             }
           }
@@ -124,156 +112,9 @@
             "description": "Successful retrieval of schema content",
             "content": {
               "application/json": {
-                "schema": {}
-              }
-            }
-          }
-        }
-      }
-    },
-    "/content/{website}/{section}": {
-      "get": {
-        "summary": "Retrieve content by website and section",
-        "parameters": [
-          {
-            "name": "website",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "section",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful retrieval of content",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
-          }
-        }
-      }
-    },
-    "/sites": {
-      "get": {
-        "summary": "Retrieve list of sites",
-        "responses": {
-          "200": {
-            "description": "Successful retrieval of sites",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
-          }
-        }
-      }
-    },
-    "/status": {
-      "get": {
-        "summary": "Get server status",
-        "responses": {
-          "200": {
-            "description": "Server is running",
-            "content": {
-              "application/json": {
                 "schema": {
-                  "properties": {
-                    "status": {
-                      "type": "string"
-                    }
-                  }
+                  "type": "object"
                 }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/schemacontent/{orgId}/{website}/{schemaId}": {
-      "get": {
-        "summary": "Retrieve schema content by ID, organization, and website",
-        "parameters": [
-          {
-            "name": "orgId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "website",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "schemaId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful retrieval of schema content",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "summary": "Add content to schema",
-        "parameters": [
-          {
-            "name": "orgId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "schemaId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {}
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Content added successfully",
-            "content": {
-              "application/json": {
-                "schema": {}
               }
             }
           }
@@ -282,3 +123,5 @@
     }
   }
 }
+
+
