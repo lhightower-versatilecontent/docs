@@ -5,7 +5,7 @@
     "dark": "/images/schemabuilder.png",
     "light": "/images/schemabuilder.png"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/images/schemabuilder.png",
   "colors": {
     "primary": "#FF7545",
     "light": "#C9F2FF",
