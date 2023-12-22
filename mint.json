@@ -48,6 +48,6 @@
       ]
     }
   ],
-  "openapi": "/openapi.json"
+  "openapi": "/api-reference/openapi.json"
   
 }
