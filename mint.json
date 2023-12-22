@@ -41,7 +41,7 @@
     {
       "group": "Endpoint Examples",
       "pages": [
-        "api-reference/endpoint/create-content",
+        "api-reference/endpoint/status",
         "api-reference/endpoint/get-content",
         "api-reference/endpoint/get-schema",
         "api-reference/endpoint/get-site-section"
