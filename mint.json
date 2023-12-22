@@ -43,7 +43,7 @@
       "pages": [
         "api-reference/endpoint/status",
         "api-reference/endpoint/get-content",
-        "api-reference/endpoint/get-schema"
+        "api-reference/endpoint/schema"
       ]
     }
   ]
