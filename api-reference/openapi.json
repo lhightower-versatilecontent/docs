@@ -86,6 +86,32 @@
         }
       }
     },
+    "/schema/{org}": {
+      "get": {
+        "summary": "Retrieves all schemasfor an organization",
+        "parameters": [
+          {
+            "name": "org",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful retrieval of schemas",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      },
     "/schema/content/{org}/{schema}": {
       "get": {
         "summary": "Retrieve schema content by ID and organization",
