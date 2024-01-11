@@ -44,7 +44,9 @@
         "api-reference/endpoint/get-status",
         "api-reference/endpoint/get-content",
         "api-reference/endpoint/get-schema",
-        "api-reference/endpoint/post-content"
+        "api-reference/endpoint/post-content",
+        "api-reference/endpoint/del-content",
+        "api-reference/endpoint/get-schemas"
       ]
     }
   ]
