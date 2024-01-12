@@ -82,16 +82,40 @@
                 }
               }
             }
+          },
+          "401": {
+            "description":"Unauthorized"
+          },
+          "404": {
+            "description":"Not Found"
           }
         }
       }
     },
-    "/schema/content/delete/{org}/{contentId}": {
-      "delete": {
-        "summary": "DELETE content using the content Id",
+    "/schema/content/{org}/{contentId}": {
+      "get": {
+        "summary": "GET content using a content id",
+        "parameters": [
+          {
+            "name": "org",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name":"contentId",
+            "in":"path",
+            "required": true,
+            "schema": {
+              "type":"string"
+            }
+          }
+        ],
         "responses": {
           "200": {
-            "description": "Delete content using the content id",
+            "description": "SUCCESS",
             "content": {
               "application/json": {
                 "schema": {
@@ -103,6 +127,56 @@
                 }
               }
             }
+          },
+          "401": {
+            "description":"Unauthorized"
+          },
+          "404": {
+            "description":"Not Found"
+          }
+        }
+      },
+      
+      "delete": {
+        "summary": "DELETE content using a content Id",
+        "parameters": [
+          {
+            "name": "org",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name":"contentId",
+            "in":"path",
+            "required": true,
+            "schema": {
+              "type":"string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "SUCCESS",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description":"Unauthorized"
+          },
+          "404": {
+            "description":"Not Found"
           }
         }
       }
@@ -130,6 +204,12 @@
                 }
               }
             }
+          },
+          "401": {
+            "description":"Unauthorized"
+          },
+          "404": {
+            "description":"Not Found"
           }
         }
       }
@@ -165,6 +245,12 @@
                 }
               }
             }
+          },
+          "401": {
+            "description":"Unauthorized"
+          },
+          "404": {
+            "description":"Not Found"
           }
         }
       },
@@ -217,6 +303,12 @@
                 }
               }
             }
+          },
+          "401": {
+            "description":"Unauthorized"
+          },
+          "404": {
+            "description":"Not Found"
           }
         }
       }
@@ -252,6 +344,12 @@
                 }
               }
             }
+          },
+          "401": {
+            "description":"Unauthorized"
+          },
+          "404": {
+            "description":"Not Found"
           }
         }
       }

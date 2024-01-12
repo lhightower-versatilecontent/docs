@@ -46,7 +46,9 @@
         "api-reference/endpoint/get-schema",
         "api-reference/endpoint/post-content",
         "api-reference/endpoint/del-content",
-        "api-reference/endpoint/get-schemas"
+        "api-reference/endpoint/get-schemas",
+        "api-reference/endpoint/get-schema-content"
+        
       ]
     }
   ]
