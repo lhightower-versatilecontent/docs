@@ -92,7 +92,7 @@
         }
       }
     },
-    "/schema/content/{org}/{contentId}": {
+    "/content/{org}/{contentId}": {
       "get": {
         "summary": "GET content using a content id",
         "parameters": [
