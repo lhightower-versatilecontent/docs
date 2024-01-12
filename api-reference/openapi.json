@@ -101,7 +101,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer"
+              "type": "string"
             }
           },
           {
@@ -109,7 +109,7 @@
             "in":"path",
             "required": true,
             "schema": {
-              "type":"string"
+              "type":"integer"
             }
           }
         ],
